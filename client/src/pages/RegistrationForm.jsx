@@ -37,7 +37,7 @@ const RegistrationForm = ({setToken}) => {
 
   const handleSendEmailOtp = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/send-otp-email', { email: formData.companyEmail });
+      const response = await axios.post('https://cuvette-wlsp.onrender.com/api/send-otp-email', { email: formData.companyEmail });
       setMessage(response.data.message);
     } catch (error) {
       setMessage('Failed to send email OTP. Please try again.');
@@ -46,7 +46,7 @@ const RegistrationForm = ({setToken}) => {
 
   const handleVerifyEmailOtp = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/verify-otp-email', { email: formData.companyEmail, otp: emailOtp });
+      const response = await axios.post('https://cuvette-wlsp.onrender.com/api/verify-otp-email', { email: formData.companyEmail, otp: emailOtp });
       setMessage(response.data.message);
       if (response.data.message === 'Email verified successfully!') {
         setEmailVerified(true);
@@ -58,7 +58,7 @@ const RegistrationForm = ({setToken}) => {
 
   const handleSendPhoneOtp = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/send-otp-phone', { phone: formData.phone });
+      const response = await axios.post('https://cuvette-wlsp.onrender.com/api/send-otp-phone', { phone: formData.phone });
       setMessage(response.data.message);
     } catch (error) {
       setMessage('Failed to send phone OTP. Please try again.');
@@ -67,7 +67,7 @@ const RegistrationForm = ({setToken}) => {
 
   const handleVerifyPhoneOtp = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/verify-otp-phone', { phone: formData.phone, otp: phoneOtp });
+      const response = await axios.post('https://cuvette-wlsp.onrender.com/api/verify-otp-phone', { phone: formData.phone, otp: phoneOtp });
       setMessage(response.data.message);
       if (response.data.message === 'Phone number verified successfully!') {
         setPhoneVerified(true);
@@ -87,7 +87,7 @@ const RegistrationForm = ({setToken}) => {
 
   const handleRegistrationSubmit = async (formData) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/register', formData);
+      const response = await axios.post('https://cuvette-wlsp.onrender.com/api/register', formData);
       if (response.status === 201) {
         localStorage.setItem('authToken', response.data.token);
         const userData = JSON.parse(atob(response.data.token.split('.')[1]));

@@ -8,7 +8,7 @@ const JobsPosted = ({userId}) => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/jobs/fetchJobs', { params: { userId: userId } });
+        const response = await axios.get('https://cuvette-wlsp.onrender.com/api/jobs/fetchJobs', { params: { userId: userId } });
         console.log(response.data);
         setJobs(response.data);
       } catch (error) {

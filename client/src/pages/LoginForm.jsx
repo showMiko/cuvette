@@ -28,7 +28,8 @@ const LoginForm = ({ setToken }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/login', formData);
+      // const response = await axios.post('http://localhost:5000/api/login', formData);
+      const response = await axios.post('https://cuvette-wlsp.onrender.com/api/login', formData);
       if (response.status === 200) {
         console.log('Login successful:', response.data);
         localStorage.setItem('authToken', response.data.token); 
