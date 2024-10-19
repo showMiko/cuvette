@@ -70,6 +70,3 @@ For using the app online, visit: [https://cuvette-flax.vercel.app/](https://cuve
 
 ## Contributing
 Contributions are welcome! Please create a pull request or open an issue to discuss any changes or enhancements.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
