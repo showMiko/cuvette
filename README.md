@@ -58,6 +58,8 @@ Before you begin, ensure you have the following installed:
 
 7. **Access the application**:
    - Open your web browser and go to `http://localhost:3000` to access the frontend of the application.
+8. **Link to the Backend**:
+   - Open your web browser and go to `https://cuvette-wlsp.onrender.com/`. Since I am using free package of Render there is a downtime and the server might not respond. In that Case Open this Link to get it running and test the frontend. 
 
 ## Usage
 1. Follow the registration process for companies.
